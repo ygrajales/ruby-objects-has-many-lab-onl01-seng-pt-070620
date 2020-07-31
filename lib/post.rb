@@ -1,14 +1,21 @@
+require 'pry'
+
 class Post 
   
-  attr_accessor :name, :post
+  attr_accessor :name, :author, :title
   
   @@all = []
   
-  def initialize(name)
-    @name = name
+  def initialize(title)
+    @title = title
     save
   end
   
+  def author_name
+    self.author ? self.author.name : nil
+  end
+  
+  binding.pry
   
   def save
     @@all << self
