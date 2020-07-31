@@ -8,7 +8,7 @@ class Post
   
   def initialize(title)
     @title = title
-    save
+    self.save
   end
   
   def author_name
