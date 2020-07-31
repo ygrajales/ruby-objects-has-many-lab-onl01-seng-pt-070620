@@ -8,12 +8,12 @@ class Song
   
   def initialize(name)
     @name = name
-    save
+    self.save
   end
   
   
   def artist_name
-    self.artist.name
+    self.artist ? self.artist.name : nil
   end
   
   
